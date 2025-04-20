@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой первый сайт</title>
+</head>
+
+<body bgcolor="#1d1d1d" text="#ffffff">
+    <!-- Шапка сайта -->
+    <header>
+        <center>
+            {% if title == 'Главная' %}
+            <h1>
+                <font color="#ffffff">Привет, {{ user.username }}!</font>
+            </h1>
+            <h1>
+                <font color="#ffffff">Добро пожаловать!</font>
+            </h1>
+            {% else %}
+            <h1>
+                <font color="#ffffff">Здесь пока пусто</font>
+            </h1>
+            {% endif %}
+        </center>
+    </header>
+
+    <!-- Навигация -->
+    <nav>
+        <table width="100%" bgcolor="#2a2a2a" cellpadding="10">
+            <tr>
+                <td align="center"><a href="#about">
+                        <font color="#ffffff">Обо мне
+                    </a></td>
+                <td align="center"><a href="#examples">
+                        <font color="#ffffff">Примеры
+                    </a></td>
+                <td align="center"><a href="#news">
+                        <font color="#ffffff">Новости
+                    </a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <body bgcolor="#1d1d1d" text="#ffffff">
+        {% block content %}{% endblock %}
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Основной контент -->
+<main>
+    <table width="80%" align="center" cellpadding="20">
+        <!-- Секция "О нас" -->
+        <tr id="about">
+            <td>
+                <h2>
+                    <font color="#ffffff">О нашей компании</font>
+                </h2>
+                <hr size="2" color="#ffffff">
+                <p>Немного обо мне</p>
+            </td>
+        </tr>
+
+        <!-- Секция "Примеры" -->
+        <tr id="examples">
+            <td>
+                <h2>
+                    <font color="#ffffff">Здесь что-то будет</font>
+                </h2>
+                <hr size="2" color="#ffffff">
+                <center>
+                    <img src="https://via.placeholder.com/400x200" alt="Фото" width="400" height="200">
+                </center>
+            </td>
+        </tr>
+    </table>
+</main>
+
+<!-- Подвал -->
+<footer id="news">
+    <center>
+        <p>
+            {% for post in posts %}
+        <div>
+            <p>{{ post.data_time }}: <b>{{ post.body }}</b></p>
+        </div>
+        {% endfor %}
+        </p>
+        <p>© 2025 Автор</p>
+    </center>
+</footer>
+{% endblock %}

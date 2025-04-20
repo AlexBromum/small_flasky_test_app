@@ -1,0 +1,1 @@
+export FLASK_APP=small_flasky_app.py
